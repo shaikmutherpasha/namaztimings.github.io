@@ -8,7 +8,7 @@ $(document).ready(function(){
 
         $.ajax({
             method: 'GET',
-            url: 'http://api.aladhan.com/calendar?latitude=17.3850&longitude=78.4867&timezonestring=Asia%2Kolkata&method=2&month=' + $month + '&year='+curr_year+,
+            url: 'http://api.aladhan.com/calendarByCity?city=Hyderabad&country=IN&month='+ $month +'&year='+ curr_year+'&method=2',
             success: function(data) {
             
                 console.log(data);
