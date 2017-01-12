@@ -10,9 +10,10 @@ $(document).ready(function(){
             method: 'GET',
             url: 'http://api.aladhan.com/calendarByCity?city=Hyderabad&country=IN&month='+ $month +'&year='+ curr_year+'&method=2',
             success: function(data) {
-            
-                console.log(data);
-            },
+             $.each(data.data, function(i, v){
+                  console.log (v)
+                   })
+           },
             error: function(data) {
                 alert('Enter Correct API');
             }
