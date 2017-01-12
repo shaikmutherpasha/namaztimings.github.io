@@ -3,7 +3,7 @@ $(document).ready(function() {
         var $month = $('.months').val();
         var d = new Date();
         var curr_year = d.getFullYear();
-        $('.mshow').html('You Have Selected ' + $month);
+      //  $('.mshow').html('You Have Selected ' + $month);
         $.ajax({
             method: 'GET',
             url: 'http://api.aladhan.com/calendarByCity?city=Hyderabad\
