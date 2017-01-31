@@ -16,7 +16,7 @@ $(document).ready(function() {
                 $.each(data.data, function(i, v) {
                        
                     $('#myTable > tbody:last-child').append('<tr>\
-                                                            <th>' + v.date.readable.split(" " , 1)[0]  + '</th>\
+                                                            <th>' + v.date.readable '</th>\
                                                             <th>' + v.timings.Fajr.split(" " , 1)[0]  + '</th>\
                                                             <th>' + v.timings.Dhuhr.split(" " , 1)[0]  + '</th>\
                                                             <th>' + v.timings.Asr.split(" " , 1)[0]  + '</th>\
