@@ -6,7 +6,7 @@ $(document).ready(function() {
       //  $('.mshow').html('You Have Selected ' + $month);
         $.ajax({
             method: 'GET',
-            url: 'http://api.aladhan.com/calendarByCity?city=Hyderabad\
+            url: 'https://api.aladhan.com/calendarByCity?city=Hyderabad\
             &country=IN&month=' + $month + '&year=' + curr_year + '&method=2&school=1',
             success: function(data) {
                 var rowCount = $('#myTable >tbody >tr').length;
