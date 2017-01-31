@@ -14,14 +14,14 @@ $(document).ready(function() {
                     $("#myTable > tbody > tr").remove();
                 }
                 $.each(data.data, function(i, v) {
-
+                       
                     $('#myTable > tbody:last-child').append('<tr>\
-                                                            <th>' + v.date.readable + '</th>\
-                                                            <th>' + v.timings.Fajr + '</th>\
-                                                            <th>' + v.timings.Dhuhr + '</th>\
-                                                            <th>' + v.timings.Asr + '</th>\
-                                                            <th>' + v.timings.Maghrib + '</th>\
-                                                            <th>' + v.timings.Isha + '</th>\
+                                                            <th>' + v.date.readable.split(" " , 1)[0]  + '</th>\
+                                                            <th>' + v.timings.Fajr.split(" " , 1)[0]  + '</th>\
+                                                            <th>' + v.timings.Dhuhr.split(" " , 1)[0]  + '</th>\
+                                                            <th>' + v.timings.Asr.split(" " , 1)[0]  + '</th>\
+                                                            <th>' + v.timings.Maghrib.split(" " , 1)[0]  + '</th>\
+                                                            <th>' + v.timings.Isha.split(" " , 1)[0]  + '</th>\
                                                             </tr>');
 
                 })
