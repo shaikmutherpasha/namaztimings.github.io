@@ -4,6 +4,9 @@ $(document).ready(function() {
         var d = new Date();
         var curr_year = d.getFullYear();
       //  $('.mshow').html('You Have Selected ' + $month);
+        function splitTime(time){
+            return time.split(“ ”, 1);
+                  }
         $.ajax({
             method: 'GET',
             url: 'https://api.aladhan.com/calendarByCity?city=Hyderabad\
@@ -14,14 +17,14 @@ $(document).ready(function() {
                     $("#myTable > tbody > tr").remove();
                 }
                 $.each(data.data, function(i, v) {
-                       
+                     var timing = v.timings;  
                     $('#myTable > tbody:last-child').append('<tr>\
                                                             <th>' + v.date.readable + '</th>\
-                                                            <th>' + v.timings.Fajr.split(" " , 1)[0]  + '</th>\
-                                                            <th>' + v.timings.Dhuhr.split(" " , 1)[0]  + '</th>\
-                                                            <th>' + v.timings.Asr.split(" " , 1)[0]  + '</th>\
-                                                            <th>' + v.timings.Maghrib.split(" " , 1)[0]  + '</th>\
-                                                            <th>' + v.timings.Isha.split(" " , 1)[0]  + '</th>\
+                                                            <th>' + splitTime(timing.Fajr)  + '</th>\
+                                                            <th>' + splitTime(timing.Dhuhr) + '</th>\
+                                                            <th>' + splitTime(timing.Asr)  + '</th>\
+                                                            <th>' + splitTime(timing.Maghrib) + '</th>\
+                                                            <th>' + splitTime(timing.Isha)  + '</th>\
                                                             </tr>');
 
                 })
