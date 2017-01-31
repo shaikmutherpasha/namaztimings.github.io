@@ -5,8 +5,8 @@ $(document).ready(function() {
         var curr_year = d.getFullYear();
       //  $('.mshow').html('You Have Selected ' + $month);
         function splitTime(time){
-            return time.split(“ ”, 1);
-                  }
+            return time.split(" ", 1);
+         }
         $.ajax({
             method: 'GET',
             url: 'https://api.aladhan.com/calendarByCity?city=Hyderabad\
