@@ -3,10 +3,10 @@ $(document).ready(function() {
         var $month = $('.months').val();
         var d = new Date();
         var curr_year = d.getFullYear();
-      //  $('.mshow').html('You Have Selected ' + $month);
-        function splitTime(time){
+        //  $('.mshow').html('You Have Selected ' + $month);
+        function splitTime(time) {
             return time.split(" ", 1);
-         }
+        }
         $.ajax({
             method: 'GET',
             url: 'https://api.aladhan.com/calendarByCity?city=Hyderabad\
@@ -17,14 +17,14 @@ $(document).ready(function() {
                     $("#myTable > tbody > tr").remove();
                 }
                 $.each(data.data, function(i, v) {
-                     var timing = v.timings;  
+                    var timing = v.timings;
                     $('#myTable > tbody:last-child').append('<tr>\
                                                             <th>' + v.date.readable + '</th>\
-                                                            <th>' + splitTime(timing.Fajr)  + '</th>\
+                                                            <th>' + splitTime(timing.Fajr) + '</th>\
                                                             <th>' + splitTime(timing.Dhuhr) + '</th>\
-                                                            <th>' + splitTime(timing.Asr)  + '</th>\
+                                                            <th>' + splitTime(timing.Asr) + '</th>\
                                                             <th>' + splitTime(timing.Maghrib) + '</th>\
-                                                            <th>' + splitTime(timing.Isha)  + '</th>\
+                                                            <th>' + splitTime(timing.Isha) + '</th>\
                                                             </tr>');
 
                 })
@@ -33,6 +33,25 @@ $(document).ready(function() {
                 alert('Sorry');
             }
         });
+    })
+
+    $.ajax({
+        method: 'GET',
+        url: 'https://api.aladhan.com/timingsByCity?city=Hyderabad&country=IN&method=2&school=1',
+        success: function(data) {
+            console.log(data);
+            var timings = data.data.timings;
+            $('#todayTimings > tbody:last-child').append('<tr>\
+                                                            <th>' + timings.Fajr + '</th>\
+                                                            <th>' + timings.Dhuhr + '</th>\
+                                                            <th>' + timings.Asr + '</th>\
+                                                            <th>' + timings.Maghrib + '</th>\
+                                                            <th>' + timings.Isha + '</th>\
+                                                            </tr>');
+        },
+        error: function(data) {
+            alert('Sorry');
+        }
     })
 
 });
