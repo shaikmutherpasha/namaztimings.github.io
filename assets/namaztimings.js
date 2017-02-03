@@ -42,10 +42,17 @@ $(document).ready(function() {
             console.log(data);
             var timings = data.data.timings;
             $('#todayTimings > tbody:last-child').append('<tr>\
-                                                            <th>' + timings.Fajr + '</th>\
-                                                            <th>' + timings.Dhuhr + '</th>\
-                                                            <th>' + timings.Asr + '</th>\
-                                                            <th>' + timings.Maghrib + '</th>\
+                                                            <th>' + 'Fajr' + '</th>\
+                                                            <th>' + timings.Fajr + '</th></tr>\
+                                                            <th>' + 'Sunrise' + '</th>\
+                                                            <th>' + timings.Sunrise + '</th></tr>\
+                                                            <tr><th>' + 'Zuhr' + '</th>\
+                                                            <th>' + timings.Dhuhr + '</th></tr>\
+                                                            <tr><th>' + 'Asr' + '</th>\
+                                                            <th>' + timings.Asr + '</th></tr>\
+                                                            <tr><th>' + 'Maghrib' + '</th>\
+                                                            <th>' + timings.Maghrib + '</th></tr>\
+                                                            <tr><th>' + 'Isha' + '</th>\
                                                             <th>' + timings.Isha + '</th>\
                                                             </tr>');
         },
