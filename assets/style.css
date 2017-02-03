@@ -1,0 +1,28 @@
+body {
+    background-image: url(../assets/bg.jpg);
+}
+
+.cborder {
+    border: 2px solid #008d76;
+    background-color: white;
+}
+
+.heading {
+    background-color: #008d76;
+}
+
+.heading h2 {
+    text-align: center;
+    margin-top: 10px;
+    padding: 2%;
+    color: white;
+}
+
+.well {
+    margin-top: 10px;
+    padding: 10px 10px 0 10px;
+}
+
+h3 {
+    color: #008d76;
+}
