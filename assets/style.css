@@ -1,5 +1,12 @@
 body {
     background-image: url(../assets/bg.jpg);
+    background-attachment: fixed;
+}
+.charminar{
+ width:90px;
+}
+.telangana{
+ width:110px;
 }
 
 .cborder {
@@ -9,13 +16,14 @@ body {
 
 .heading {
     background-color: #008d76;
+        min-height: 115px;
 }
 
 .heading h2 {
     text-align: center;
-    margin-top: 10px;
-    padding: 2%;
+    margin-top: 20px;
     color: white;
+    text-transform: uppercase;
 }
 
 .well {
@@ -25,4 +33,20 @@ body {
 
 h3 {
     color: #008d76;
+}
+
+.add-image{
+ margin-top: 25px;
+}
+.itiming{
+ color: white;
+ font-weight: bold;
+ font-size: small;
+ text-align: center;
+}
+#todayTimings tbody tr{
+     background-color: #d9edf7;
+}
+.img-responsive{
+ width:100%;
 }
