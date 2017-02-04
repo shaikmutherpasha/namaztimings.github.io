@@ -21,6 +21,7 @@ $(document).ready(function() {
                     $('#myTable > tbody:last-child').append('<tr>\
                                                             <th>' + v.date.readable + '</th>\
                                                             <th>' + splitTime(timing.Fajr) + '</th>\
+                                                            <th>' + splitTime(timing.Sunrise) + '</th>\
                                                             <th>' + splitTime(timing.Dhuhr) + '</th>\
                                                             <th>' + splitTime(timing.Asr) + '</th>\
                                                             <th>' + splitTime(timing.Maghrib) + '</th>\
@@ -30,7 +31,7 @@ $(document).ready(function() {
                 })
             },
             error: function(data) {
-                alert('Sorry');
+                alert('There is no response from server side');
             }
         });
     })
@@ -57,8 +58,7 @@ $(document).ready(function() {
                                                             </tr>');
         },
         error: function(data) {
-            alert('Sorry');
+            alert('There is no response from server side');
         }
     })
-
 });
