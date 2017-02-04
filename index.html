@@ -11,9 +11,22 @@
     <div class="container cborder">
         <div class="row">
             <div class="col-md-12 heading">
-                <h2>Telangana State Namaaz Timings</h2>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <img class="charminar" src="assets/Charminar.png" />
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                    <h2>Telangana State Namaaz Timings</h2>
+                    <p class="itiming">
+                        <span id="date"></span>|
+                        <span id="total"></span> |
+                        <span id="time"></span>
+                    </p>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2">
+                    <img class="telangana" src="assets/telangana.png">
+                </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <div class="well">
                     <form>
                         <select class="form-control months">
@@ -37,6 +50,7 @@
                             <tr>
                                 <th>Date</th>
                                 <th>Fajr</th>
+                                <th>Sunrise</th>
                                 <th>Zuhr</th>
                                 <th>Asr</th>
                                 <th>Maghrib</th>
@@ -48,18 +62,23 @@
                     </table>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <h3>Today's Prayer Timings</h3>
                 <table id="todayTimings" class="table table-hover table-bordered">
                     <tbody>
                     </tbody>
                 </table>
+                <div class="add-image">
+                    <img class="img-responsive" src="assets/add.jpg">
+                </div>
             </div>
         </div>
     </div>
     <script type="text/javascript" src="assets/jquery.js"></script>
     <script type="text/javascript" src="assets/bootstrap.js"></script>
     <script type="text/javascript" src="assets/namaztimings.js"></script>
+    <script type="text/javascript" src="assets/jquery.chocolate.js"></script>
+    <script type="text/javascript" src="assets/islamicmonth.js"></script>
 </body>
 
 </html>
