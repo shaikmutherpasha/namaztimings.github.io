@@ -55,3 +55,13 @@ h3 {
 .img-responsive {
     width: 100%;
 }
+
+footer.container {
+    background-color: #008d76;
+    padding: 2%;
+    color: white;
+}
+
+.h3-top {
+    margin-top: 0px;
+}
