@@ -3,7 +3,10 @@ $(document).ready(function() {
         var $month = $('.months').val();
         var d = new Date();
         var curr_year = d.getFullYear();
-        //  $('.mshow').html('You Have Selected ' + $month);
+        var $monthText = $(".months option:selected").text();
+        var current_month = ( d.getMonth() < 10 ? '0' : '') + (d.getMonth()+1);
+        $('#selected-month').html('Namaaz Timings For '+ $monthText);
+        $('.months').prop('selectedIndex', current_month );
         function splitTime(time) {
             return time.split(" ", 1);
         }
