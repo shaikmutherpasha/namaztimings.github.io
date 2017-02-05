@@ -114,3 +114,4 @@ var date = currentTime.getDate()
 var year = currentTime.getFullYear()
 $('#date').html(day + "  " + date + "/" + month + "/" + year);
 $('#time').html((currentTime.getHours() < 10 ? '0' : '') + currentTime.getHours() + ':' + (currentTime.getMinutes() < 10 ? '0' : '') + currentTime.getMinutes());
+$('.year').html(currentTime.getFullYear());
