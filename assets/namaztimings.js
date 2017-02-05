@@ -5,7 +5,7 @@ $(document).ready(function() {
         var curr_year = d.getFullYear();
         var $monthText = $(".months option:selected").text();
     //    var current_month = ( d.getMonth() < 10 ? '0' : '') + (d.getMonth()+1);
-        $('#selected-month').html('Namaaz Timings For '+ $monthText);
+        $('#selected-month').html('Prayer Timings For '+ $monthText);
      //   $('.months').prop('selectedIndex', current_month );
         function splitTime(time) {
             return time.split(" ", 1);
