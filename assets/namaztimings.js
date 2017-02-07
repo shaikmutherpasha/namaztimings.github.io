@@ -4,9 +4,7 @@ $(document).ready(function() {
         var d = new Date();
         var curr_year = d.getFullYear();
         var $monthText = $(".months option:selected").text();
-    //    var current_month = ( d.getMonth() < 10 ? '0' : '') + (d.getMonth()+1);
-        $('#selected-month').html('Prayer Timings For '+ $monthText);
-     //   $('.months').prop('selectedIndex', current_month );
+        $('#selected-month').html('Prayer Timings For ' + $monthText);
         function splitTime(time) {
             return time.split(" ", 1);
         }
@@ -38,6 +36,11 @@ $(document).ready(function() {
             }
         });
     })
+    var month = new Date().getMonth() + 1;
+    if (month < 10) {
+        month = "0" + month;
+    }
+    $('.months').val(month).trigger("change");
 
     $.ajax({
         method: 'GET',
