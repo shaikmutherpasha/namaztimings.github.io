@@ -7,6 +7,6 @@ $(document).ready(function() {
     var fullDate = date + " " + month + " " + year;
 
     if ($("tr:nth-child(27) th:first").text() == fullDate) {
-        $("tr:nth-child(27)").css("background-color": "#008d76", "color": "#fff");
+        $("tr:nth-child(27)").css({"background-color": "#008d76", "color": "#fff"});
     }
 })
