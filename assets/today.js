@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var dateData = new Date();
-    var date = dateData.getDate()
+    var date = dateData.getDate();
     var monthName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     var month = monthName[dateData.getMonth()];
     var year = dateData.getFullYear();
