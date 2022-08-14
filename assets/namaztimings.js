@@ -10,7 +10,7 @@ $(document).ready(function() {
         }
         $.ajax({
             method: 'GET',
-            url: 'https://api.aladhan.com/calendarByCity?city=Hyderabad\
+            url: 'https://api.aladhan.com/v1/calendarByCity?city=Hyderabad\
             &country=IN&month=' + $month + '&year=' + curr_year + '&method=2&school=1',
             success: function(data) {
                 var rowCount = $('#myTable >tbody >tr').length;
@@ -44,7 +44,7 @@ $(document).ready(function() {
 
     $.ajax({
         method: 'GET',
-        url: 'https://api.aladhan.com/timingsByCity?city=Hyderabad&country=IN&method=2&school=1',
+        url: 'https://api.aladhan.com/v1/timingsByCity?city=Hyderabad&country=IN&method=2&school=1',
         success: function(data) {
             console.log(data);
             var timings = data.data.timings;
